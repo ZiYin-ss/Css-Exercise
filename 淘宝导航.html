@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>淘宝导航</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			.nav{
+				width: 100%;
+			}
+			
+			/*设置每一行的容器*/
+			.nav-inner{
+				display: flex;
+				/*分布到每个子元素的俩边*/
+				justify-content: space-around;
+			}
+			/*设置伸缩*/
+			.item{
+				width: 18%;
+				text-align: center;
+			}
+			
+			.item img{
+				/*设置图片的宽度和父元素宽度一样*/
+				width: 100%;
+			}
+			
+			.item a{
+				font-size: 16px;
+				color: #333;
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<!--创建外层容器-->
+		<nav class="nav">
+			<div class="nav-inner">
+				<div class="item">
+					<a href="javascript:;">
+						<img src="淘宝/1.png" >
+						<span>天猫</span>
+					</a>
+				</div>
+				<div class="item">
+					<a href="javascript:;">
+						<img src="淘宝/2.png" >
+						<span>聚划算</span>
+					</a>
+				</div>
+				<div class="item">
+					<a href="javascript:;">
+						<img src="淘宝/3.png" >
+						<span>天猫国际</span>
+					</a>
+				</div>
+				<div class="item">
+					<a href="javascript:;">
+						<img src="淘宝/4.png" >
+						<span>外卖</span>
+					</a>
+				</div>
+				<div class="item">
+					<a href="javascript:;">
+						<img src="淘宝/5.png" >
+						<span>天猫超市</span>
+					</a>
+				</div>
+			</div>
+			<div class="nav-inner">
+				<div class="item">
+					<a href="javascript:;">
+						<img src="淘宝/6.png" >
+						<span>充值中心</span>
+					</a>
+				</div>
+				<div class="item">
+					<a href="javascript:;">
+						<img src="淘宝/7.png" >
+						<span>飞猪旅行</span>
+					</a>
+				</div>
+				<div class="item">
+					<a href="javascript:;">
+						<img src="淘宝/8.png" >
+						<span>领金币</span>
+					</a>
+				</div>
+				<div class="item">
+					<a href="javascript:;">
+						<img src="淘宝/9.png" >
+						<span>拍卖</span>
+					</a>
+				</div>
+				<div class="item">
+					<a href="javascript:;">
+						<img src="淘宝/10.png" >
+						<span>分类</span>
+					</a>
+				</div>
+			</div>
+		</nav>
+	</body>
+</html>

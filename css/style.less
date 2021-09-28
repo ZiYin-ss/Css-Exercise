@@ -1,0 +1,185 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+//定义个变量到时候直接从这改就可以
+@total-width:750;
+
+//设置公共类
+.w{
+	width: 693/40rem;
+	margin: 0 auto;
+}
+
+//设置根元素
+html{
+	//设置rem比值
+	font-size: 100vw/@total-width*40;
+	background-color: #eff0f4;
+}
+
+//设置头部header
+.top-bar:extend(.w){
+	//设置弹性容器
+	display: flex;
+	//设置高度
+	height: 175/40rem;
+	line-height: 175/40rem;
+	//设置主轴对齐方式
+	justify-content: space-between;
+	//设置辅轴对齐方式
+	align-items: center;
+	
+	a{
+		font-size: 50/40rem;
+		color: #24253d;
+		
+		i{
+			color: #999;
+			font-size: 18/40rem;
+		}
+	}
+}
+
+//去掉a的下划线
+a{
+		text-decoration: none;
+}
+
+//设置banner
+.banner:extend(.w){
+	img{
+		width: 100%;
+	}
+}
+
+//设置中间菜单
+.menu:extend(.w){
+	height: 329/40rem ;
+	display: flex;
+	//设置换行
+	flex-flow: row wrap;
+	//设置对齐方式
+	justify-content: space-between;
+	//设置辅轴方向的对齐方式
+	align-content:space-evenly;
+	//设置框的大小
+	a{
+		width: 327/40rem;
+		height: 104/40rem;
+		//对齐
+		line-height: 104/40rem;
+		color: white;
+		border-radius: 10/40rem ;
+		
+		//这个用图标字体倒挤出来就可以了
+		i{
+			margin: 0 32/40rem 0 38/40rem;
+		}
+	}
+	.course{
+		background-color: #f97053;
+	}
+	.star{
+		background-color: #cd6efe;
+	}
+	.sub{
+		background-color: #f97053;
+	}
+	.download{
+		background-color: #1bc4fb;
+	}
+}
+
+
+//设置课程列表
+.course-list:extend(.w){
+	height: 394/40rem;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	
+	.title{
+		display: flex;
+		justify-content: space-between;
+		//辅轴的对齐方式 注意还有一个content是留白
+		align-items: center;
+		//课程
+		h2{
+			font-size: 33/40rem;
+			color: #24253d;
+			border-left:2px solid red ;
+			padding-left: 10px;
+		}
+		//更多
+		a{
+			font-size: 28/40rem;
+			color: #656565;
+		}
+	}
+}
+
+//设置列表弹性
+.items-list{
+	overflow: auto;
+	display: flex;
+	justify-content: space-around;
+	//注意还要设置换行啊
+}
+
+//设置课程列表项
+.item{
+	flex: none;
+	//设置的是所有的东西的
+	box-sizing: border-box;
+	width: 320/40rem;
+	height: 324/40rem;
+	padding: 0 22/40rem;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0,0,0,.3);
+	border-radius: 10px;
+	display: flex;
+	flex-flow:column;
+	//主轴 现在y是主轴
+	justify-content: space-around;
+	
+	//设置图片宽度
+	img{
+		width: 100%;
+	}
+	//课程标题
+	.course-title{
+		font-size: 32/40rem;
+		color: #24253d;
+	}
+	
+	.user-info{
+		display: flex;
+		align-items: center;
+	}
+	
+	//头像
+	.avatar{
+		width: 42/40rem;
+		height: 42/40rem;
+	}
+	//名字
+	.nickname{
+		margin-left:6px ;
+		font-size: 24/40rem;
+		color: #963993;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

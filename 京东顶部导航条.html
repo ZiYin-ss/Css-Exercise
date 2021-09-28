@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>京东顶部导航条</title>
+		<!--引入重置样式表和图标字体-->
+		<link rel="stylesheet" href="../css布局/css/reset.css"/>
+		<link rel="stylesheet" href="../fa/css/all.css" />
+		<style>
+			/*解决页面塌陷的问题，因为有浮动就有塌陷(固定格式) 在父元素里面放着*/
+			.clearfix::before,
+			.clearfix::after{
+				clear: both;
+				content: '';
+				display: table;
+			}
+			
+			body{
+				/*设置整个boby的字体*/
+				font:12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+			}
+			
+			/*设置外部容器样式*/
+			.top-bar-wrapper{
+				width: 100%;
+				/*文字于高度垂直居中*/
+				line-height: 30px;
+				height: 30px;
+				background-color: #E3E4E5;
+				border-bottom: 1px #DDD solid;
+			}
+			
+			/*设置内部容器的样式*/
+			.top-tar{
+				/*内部容器的固定宽度*/
+				width: 1190px;
+				margin: 0 auto;
+				position: relative;
+			}
+			
+			/*这个是在内部容器的层级设置的 就是说a，i，span都是设置为同一个颜色呢*/
+			.top-tar a,
+			.top-tar i,
+			.top-tar span{
+				/*注意是内部容器里面的所有a标签都搞成这个字体颜色*/
+				color: #999;
+				text-decoration: none;
+			}
+			
+			/*这个把a标签的移入动作给设置，还有俩个本来就要红的部分*/
+			.top-tar a:hover,
+			.top-tar a.hightlight{
+				color: #f10215;
+			}
+			
+			/*设置location的浮动位置(北京)*/
+			.location{
+				float: left;
+			}
+			
+			/*设置location下的小图标颜色*/
+			.location .fas{
+				color: #f10215;
+			}
+						
+			/*设置城市列表的效果*/
+			.location .city-list{
+				display: none;
+				width: 320px;
+				height: 436px;
+				background-color: white;
+				border: 1px solid rgb(204,204,204);
+				/*设置绝对定位 使其不占据页面的位置*/
+				position: absolute;
+				top: 31px;
+				z-index: 999;
+				box-shadow: 0 2 12px rgba(0,0,0,.3);
+			}
+			
+			/*当鼠标移入到location时 让city-list显示 做这种项目的时候都是给父元素的*/
+			.location:hover .city-list{
+			   display: block;
+			}
+			
+			/*设置current-cit的移入效果*/
+			.current-cit{
+				padding: 0 10px;
+				border: 1px solid transparent;
+				position: relative;
+				z-index: 9999;
+			}
+			.location:hover .current-cit{
+				background-color: white;
+				border: 1px solid rgb(204,204,204);
+				border-bottom: none;
+				padding-bottom: 1px;
+				
+			}
+			
+			/*设置右侧菜单的浮动位置(杂七杂八的)*/
+			.shortcut{
+				float: right;
+			}
+			
+			/*杂七杂八下面的li是不是得浮动向左啊*/
+			.shortcut li{
+				float: left;
+			}
+			
+			/*设置分割线啊*/
+			.shortcut .line{
+				width: 1px;
+				height: 10px;
+				background-color: #999;
+				margin: 12px 12px 0;
+			}
+		
+		</style>
+	</head>
+	<body>
+		<!--创建外围容器-->
+		<div class="top-bar-wrapper">
+			<!--创建内部容器-->
+			<div class="top-tar clearfix">
+				<!--左侧菜单(北京)-->
+				<div class="location">
+					<div class="current-cit">
+						<i class="fas fa-map-marker-alt"></i>
+						<a href="javascript:;">北京</a>
+					</div>
+					
+					<div class="city-list">
+						
+					</div>
+				</div>
+				
+				<!--右侧菜单-->
+				<ul class="shortcut clearfix">
+					<li>
+						<a href="javascript:;">你好，请登录</a>
+						<a class="hightlight" href="javascript:;">免费注册</a>
+					</li>
+					
+					<!--分割线-->
+					<li class="line"></li>
+					<li><a href="javascript">我的订单</a></li>
+					
+					<li class="line"></li>
+					<li>
+						<a href="javascript">我的京东</a>
+						<i class="fas fa-angle-down"></i>
+					</li>
+					
+					<li class="line"></li>
+					<li><a href="javascript">京东会员</a></li>
+					
+					<li class="line"></li>
+					<li>
+						<a class="hightlight" href="javascript">企业采购</a>
+						<i class="fas fa-angle-down"></i>
+					</li>
+					
+					<li class="line"></li>
+					<li>
+						<span>客户服务</span>
+						<i class="fas fa-angle-down"></i>
+					</li>
+					
+					<li class="line"></li>
+					<li>
+						<span>网站导航</span>
+						<i class="fas fa-angle-down"></i>
+					</li>
+					
+					<li class="line"></li>
+					<li><span>手机京东</span></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,64 @@
+a{
+	color: #fff;
+	text-decoration: none;
+}
+
+//顶部导航条
+.top-bar{
+	height: 48px;
+	padding: 0 14px;
+	background-color: #000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+	//导航图标
+	.menu-icon{
+		height: 48px;
+		width: 18px;
+		position: relative;
+		//给三个li开启了绝对定位，然后的话给他们分别设置位置  其他方法有 但是我不知道，日后积累把
+		//有个问题就是说你为什么就看到一条线 只有一条线
+		li{
+			width: 18px;
+			height: 1px;
+			background-color: #fff;
+			position: absolute;
+			//修改变形的原点
+			transform-origin: left center;
+			transition: 0.5s;
+		}
+		
+		li:nth-child(1){
+			top:18px;
+		}		
+		li:nth-child(2){
+			top:24px;
+			}
+		
+		li:nth-child(3){
+			top:30px;	
+		}
+		
+		//鼠标移入效果(需要js实现)
+		&:hover{
+			li:nth-child(1){
+				top:18px;
+				transform: rotateZ(40deg);
+			}
+			
+			li:nth-child(2){
+				top:24px;
+				//隐藏
+				visibility: hidden;
+			}
+			
+			li:nth-child(3){
+				top:30px;
+				transform: rotateZ(-40deg);
+			}
+		}
+	}
+	
+}

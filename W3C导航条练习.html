@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>导航条的练习</title>
+		<link rel="stylesheet" href="../css布局/css/reset.css" />
+		<style>
+			/*设置nav大小*/
+			.nav{
+				width: 1250px;
+				height: 48px;
+				background-color: #E8E7E3;
+				margin: 100px auto;
+			}
+			
+			/*设置li*/
+			.nav li{
+				float: left;
+				/*将文字在父元素中垂直居中，文字是横的，然后高度是竖的，是不是垂直居中吗*/
+				line-height: 48px;
+			}
+			
+			/*设置a的样式*/
+			.nav a{
+				/*将a转换为块元素,转成块元素之后就是a继承了li的高度 都可以点的了*/
+				display: block;
+				text-decoration: none;
+				/*这个color就是指 a标签字的颜色*/
+				color: #777777;
+				font-size: 18px;
+				padding: 0 53px;
+			}
+			
+			/*这个地方到了最后一个会有一点边边没有搞上，所以你把nav整体的宽度删多的就可以，W3C里面是写好了宽度的，7个加起来是1210*/
+			.nav a:hover{
+				background-color: #3f3f3f;
+				color: #E8E7E3;
+			}
+		</style>
+	</head>
+	<body>
+		<!--创建导航条的结构-->
+		<ul class="nav">
+			<li>
+				<a href="#">HTML/CSS</a>
+			</li>
+			<li>
+				<a href="#">Browser Side</a>
+			</li>
+			<li>
+				<a href="#">Server Side</a>
+			</li>
+			<li>
+				<a href="#">Programming</a>
+			</li>
+			<li>
+				<a href="#">XML</a>
+			</li>
+			<li>
+				<a href="#">Web Building</a>
+			</li>
+			<li>
+				<a href="#">Reference</a>
+			</li>
+		</ul>
+	</body>
+</html>

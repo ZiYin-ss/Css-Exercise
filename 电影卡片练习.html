@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>电影卡片练习</title>
+		<link rel="stylesheet" href="../css布局/css/reset.css" />
+		<link rel="stylesheet" href="../fa/css/all.css" />
+		<style>
+			/*设置外层容器*/
+			.outer{
+				width: 240px;
+				margin: 100px auto;
+				/*设置整个边框的阴影*/
+				box-shadow: 0 0 10px rgba(0,0,0.3);
+			}
+			
+			/*设置图片*/
+			.img-wrapper img{
+				width: 100%;
+				vertical-align: bottom;
+			}
+		
+			/*设置内容器*/
+			.info{
+				padding: 0 18px;
+				color: #acaaaa;
+				font-size:14px;
+			}
+			
+			/*设置标题*/
+			/*h2*/
+			.info .title{
+				margin-top: 13px;
+				margin-bottom: 15px;
+				color:#717171 ;
+				font-size: 18px;
+			}
+			
+			/*
+				h3也是要设置的，但是你看h3的字体和info里面设置的一样，然后位置可以通过子元素i来设置
+				和简介的距离可以通过简介来设置，然后和h2的距离通过h2来设置 这样就可以不用写h3的设置
+				说这个的意思就是说可以简化就简化，量少效率高
+			*/
+			/*设置h3下面的i*/
+			.info .category i{
+				margin-right: 7px;
+				margin-left: 4px;
+			}
+			
+			/*设置简介样式 因为这个简介的字体和h3需要设置的字体一样所以可以放在info里面设置，但h2不一样可以直接设置，不影响*/
+			.info .intro{
+				line-height: 20px;
+				margin: 18px 4px;
+			}
+		
+			/*设置下边的内容*/
+			.star-wrapper{
+				height: 46px;
+				border-top: 1px solid #e9e9e9;/*因为在标题那，大小设置了 边框也是那么大，注意一下*/
+				line-height: 46px;
+				color: #ddd;
+			}
+			/*设置俩个亮的星星*/
+			.star .light{
+				color: #b9cb41;
+			}
+			/*设置星星*/
+			.star{
+				float: left;
+				margin-left: 10px;
+			}
+			
+			.star-wrapper .weibo{
+				float: right;
+				margin-right:10px ;
+			}
+		</style>
+	</head>
+	<body>
+		<!--创建外层容器-->
+		<div class="outer">
+			
+			<!--创建图片容器-->
+			<div class="img-wrapper">
+				<!--设置图片-->
+				<img src="./img/9.jpg" />
+			</div>
+			
+			<!--创建内容区容器-->
+			<div class="info">
+				<h2 class="title">
+					动画电影
+				</h2>
+				<h3 class="category">
+					<i class="fas fa-map-marker-alt"></i>
+					动画
+				</h3>
+				<p class="intro">
+					这是一个迪士尼的动画电影，非常非常好看
+				</p>
+			</div>
+			
+			<!--创建分享评分的容器-->
+			<div class="star-wrapper">
+				<!--创建星星-->
+				<ul class="star">
+					<li class="fas fa-star light"></li>
+					<li class="fas fa-star light"></li>
+					<li class="fas fa-star"></li>
+					<li class="fas fa-star"></li>
+				</ul>
+				<!--创建微博图标-->
+				<ul class="weibo">
+					<li class="fab fa-weibo"></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

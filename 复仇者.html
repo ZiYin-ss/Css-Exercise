@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>复仇者联盟</title>
+		<style type="text/css">
+			html{
+				perspective: 800px;
+			}
+			
+			.cube{
+				width: 200px;
+				height: 200px;
+				margin: 100px auto;
+				/*设置元素的3d变形效果*/
+				transform-style: preserve-3d;
+				animation: rotate 20s;
+			}
+			
+			.cube > div{
+				width: 200px;
+				height: 200px;
+				/*为元素设置透明效果 给整个元素设置*/
+				opacity: 0.5;
+				position: absolute;
+			}
+			
+			img{
+				/*顶部对齐 去除掉那个多的那个边框*/
+				vertical-align: top;
+			}
+			
+			.box1{
+				/*这个地方正常的理解是转了90度 在向z轴平移100px(如果你反着理解就特别好理解) z轴平移 会变进(大)*/
+				transform: rotateY(90deg) translateZ(100px);
+			}
+			
+			.box2{
+				transform: rotateY(-90deg) translateZ(100px);
+			}
+			
+			.box3{
+				transform: rotateX(90deg) translateZ(100px);
+			}
+			
+			.box4{
+				transform: rotateX(-90deg) translateZ(100px);
+			}
+			
+			.box5{
+				transform:rotateY(180deg) translateZ(100px);
+			}
+			
+			.box6{
+				transform:rotateY(0) translateZ(100px);
+			}
+			
+			@keyframes rotate{
+				from{
+					transform: rotateX(0) rotateZ(0);
+				}
+				to{
+					transform: rotateX(1turn) rotateZ(1turn);
+				}
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!--创建一个外部容器-->
+		<div class="cube">
+			<!--引入图片-->
+			<div class="box1">
+				<img src="img/10.jpg">
+			</div>
+			<div class="box2">
+				<img src="img/11.jpg">
+			</div>
+			<div class="box3">
+				<img src="img/12.jpg">
+			</div>
+			<div class="box4">
+				<img src="img/13.jpg">
+			</div>
+			<div class="box5">
+				<img src="img/14.jpg">
+			</div>
+			<div class="box6">
+				<img src="img/15.jpg">
+			</div>
+		</div>
+		
+	</body>
+</html>
